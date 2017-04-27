@@ -1,0 +1,324 @@
+//= require application
+/*   fonts
+font-family: 'Raleway', sans-serif;
+font-family: 'Questrial', sans-serif;
+*/
+
+/* colors
+#d32f2f/ 'red-darken
+ */
+
+html,
+body {
+   min-height: 100%;
+   font-family: 'Raleway', sans-serif;
+   font-weight: lighter;
+   margin: 0;
+   padding: 0;
+ }
+
+/* === nav === */
+
+.nav-wrapper {
+  padding: .25rem 2rem !important;
+  height: 100px !important;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex;
+  flex-direction: column;
+
+}
+
+nav ul {
+  display: flex;
+  justify-content:flex-end;
+  flex-direction: row;
+}
+
+nav ul a:hover {
+  color: #d32f2f;
+  font-weight: bold;
+  background-color: transparent;
+}
+
+.nav-wrapper a {
+  color: #424242; /* update later */
+}
+
+
+#Intro {
+  height: 95vh;
+  background: #f5f5f5;
+}
+
+#Quote-container {
+  background-color: #009688;
+  opacity: .75;
+  height: auto;
+  color: white;
+  margin: 0;
+  padding: 3rem 0;
+}
+
+.random-quotes {
+  /*overflow: hidden;*/
+   position: relative;
+   width: 100%;
+}
+
+.random-quotes h3 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+.quote {
+  text-align: left;
+}
+
+.quote-author {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.i-left {
+  height: 100%;
+  position: relative;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.i-right {
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+}
+
+@media (max-width: 735px) {
+  .random-quotes {
+    margin-top: -60px;
+  }
+  .random-quotes h3 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+  .i-right, .i-left {
+    visibility: hidden;
+  }
+}
+
+#About-intro {
+  height: 85vh;
+}
+
+#About {
+  height: 100vh;
+}
+
+#Projects {
+  height: auto;
+  /*padding: 2rem 0;*/
+  margin: 4rem 0;
+}
+
+#Designs {
+  /*padding: 2rem 0;*/
+  margin: 5rem 0;
+  height: auto;
+}
+
+.site-intro {
+  font-family: 'Raleway', sans-serif;
+  font-size: 6vh;
+  line-height: 8.25vh;
+  padding: 1rem .5rem;
+  margin: .25rem 0;
+  text-align: center;
+}
+
+.examples {
+  text-align: center;
+  margin: 2rem 0 3rem 0;
+  padding: 0 0 1rem 0;
+}
+
+#Projects h4 {
+  font-family: 'Questrial', sans-serif;
+}
+#Designs h4 {
+  font-family: 'Questrial', sans-serif;
+}
+
+.examples p {
+  margin: 0 0 1rem 0;
+  padding: 0;
+  font-size: 1.15rem;
+  text-align: center;
+}
+.examples img {
+  /*margin: 2rem 0;*/
+  border: .15px solid lightgrey;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.examples .btn{
+  margin-bottom: 1.5rem !important;
+}
+
+.designs {
+  margin: 3rem 0;
+  padding: 1rem;
+  height: auto;
+}
+
+footer {
+  padding: 5rem 0 2rem 0;
+}
+
+
+#Contact {
+  height: auto;
+  /*margin: 2rem 0;*/
+}
+
+#Contact i.material-icons {
+  font-size: 1.25rem;
+}
+
+.color-block {
+  bottom: 0;
+  height: 1rem;
+  background-color: #009688;
+}
+
+/*helpers*/
+
+.side-nav {
+    transform: translateX(-100%);
+    transition: .25s;
+    display: flex;
+    justify-content:flex-start;
+    flex-direction: column;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: #d32f2f;
+}
+
+a:hover.btn {
+  color: white;
+}
+
+hr {
+  border: none;
+  height: .75px;
+  background-color: #d32f2f; /* Modern Browsers */
+}
+
+li {
+  display: inline;
+  font-size: 1.75rem;
+  padding: 0 .25rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+.email {
+  color: #EF5450;
+}
+
+.linkedin {
+  color: #0077b5;
+}
+
+.git {
+  color: #ff9933;
+}
+
+.twitter {
+  color: #55acee;
+}
+
+.instagram {
+  color: #c13584;
+}
+
+.coroflot {
+  border-radius: .25rem;
+  height: 23px;
+  width: 23px;
+  margin-bottom: -.09em;
+}
+
+.phone {
+  color: #26A79A;
+}
+
+
+
+/*======= media queries =========*/
+
+@media (max-width: 600px ) {
+  .site-intro {
+    font-size: 4.5vh;
+    line-height: 6.25vh;
+    padding: 0 1rem;
+    margin: .25rem 0;
+  }
+}
+
+i.fa.fa-arrow-left,
+i.fa.fa-arrow-right {
+  display: none !important;
+}
+
+
+
+@media (min-width: 992px) {
+  i.fa.fa-arrow-left,
+  i.fa.fa-arrow-right {
+    display: block !important;
+    position: absolute;
+    color: black;
+    opacity: .25;
+  }
+
+  i.fa.fa-arrow-left:hover {
+      /*color: #d32f2f;*/
+      opacity: 1;
+  }
+
+  i.fa.fa-arrow-right:hover {
+      /*color: #d32f2f;*/
+      opacity: 1;
+  }
+
+  .fa-arrow-left.slick-arrow {
+    top: 50%;
+    left: -4rem;
+    margin-top: 10vh;
+  }
+
+  .fa-arrow-right.slick-arrow {
+    top: 50%;
+    right: -4rem;
+    margin-top: 10vh;
+  }
+}
+
+@media (max-width:991px) {
+  .designs {
+    margin: 1rem 0;
+    padding: .5rem;
+    height: auto;
+  }
+}

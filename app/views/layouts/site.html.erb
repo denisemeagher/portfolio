@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= csrf_meta_tags %>
+
+    <meta charset="utf-8">
+    <title>Denise Meagher | Web Developer &amp; Designer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Questrial|Raleway:300,400" rel="stylesheet">
+    <!--materialize icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+    <% if stylesheet_exists_base_slug?(@site.slug) %>
+      <%= stylesheet_link_tag @site.slug%>
+    <% else %>
+      <%= stylesheet_link_tag "site" %>
+    <% end %>
+
+    <% if content_for?(:head) %>
+      <%= yield(:head) %>
+    <% end %>
+
+  </head>
+
+  <body>
+      <%= yield %>
+
+      <div class="javascript">
+        <% if javascript_exists_base_slug?(@site.slug) %>
+          <%= javascript_include_tag @site.slug %>
+        <% end %>
+      </div>
+  </body>
+</html>
