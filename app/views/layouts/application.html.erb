@@ -16,8 +16,8 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 
-    <% if stylesheet_exists_base_slug?(params[:slug]) %>
-      <%= stylesheet_link_tag params[:slug] %>
+    <% if stylesheet_exists_base_slug?(params[:id]) %>
+      <%= stylesheet_link_tag params[:id] %>
     <% else %>
       <%= stylesheet_link_tag "site" %>
     <% end %>
@@ -32,8 +32,8 @@
       <%= yield %>
       <div class="javascript">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-        <% if javascript_exists_base_slug?(params[:slug]) %>
-          <%= javascript_include_tag params[:slug] %>
+        <% if javascript_exists_base_slug?(params[:id]) %>
+          <%= javascript_include_tag params[:id] %>
         <% end %>
       </div>
   </body>

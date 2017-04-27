@@ -16,12 +16,12 @@ module ApplicationHelper
   end
 
   def javascript_exists_base_slug?(script)
-    script = "#{Rails.root}/app/assets/javascripts/#{@site.slug}.js"
+    script = "#{Rails.root}/app/assets/javascripts/#{script}.js"
     File.exists?(script) || File.exists?("#{script}.coffee")
   end
 
   def stylesheet_exists_base_slug?(sheet)
-    sheet = "#{Rails.root}/app/assets/stylesheets/#{@site.slug}.css"
+    sheet = "#{Rails.root}/app/assets/stylesheets/#{sheet}.css"
     if File.exists?(sheet)
       sheet
     elsif File.exists?("#{sheet}.scss")
